@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i[ show update destroy ]
 
   def index
+    @questions = Quetion.all
   end
 
   def show
