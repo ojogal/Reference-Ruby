@@ -5,8 +5,8 @@
     <h3><%= q.title %></h3>
     <p1><%= q.body %></p1>
     <h5>
-      <time datetime="<% q.created_at.strftime('%Y-%m-%d %H:%M:%S') %>">
-        <%= q.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+      <time datetime="<% q.format_time %>">
+        <%= q.format_time %>
       </time>
     </h5>
   <% end %>
