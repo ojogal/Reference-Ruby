@@ -13,6 +13,13 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    @question = Question.create(question_params)
+
+    if @question.save
+      redirect_to questions_path
+    else
+      render :new
+    end
   end
 
   def update
@@ -23,6 +30,7 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
+    params.require(:question).permit(:title, :body)
   end
 
   def set_question
