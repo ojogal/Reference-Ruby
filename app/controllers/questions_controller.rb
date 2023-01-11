@@ -24,6 +24,11 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def update
+    if @question.update(question_params)
+      redirect_to questions_path
+    else
+      render :edit
+    end
   end
 
   def destroy
