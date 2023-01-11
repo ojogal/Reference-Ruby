@@ -17,7 +17,7 @@
 </div>
 
 <div>
-  <%= link_to 'Slette spørsmål', destroy_questions_path(q), data: { method: :delete } %>
+  <%= link_to 'Slette spørsmål', destroy_questions_path(q), data: { method: :delete, confirm: 'Er du sikker?' } %>
 </div>
 
 
