@@ -1,0 +1,13 @@
+<h1>Nytt spørsmål</h1>
+
+<%= form_with model: @question do |f| %>
+  <div>
+    <%= f.text_field :title, required: true, minlength: 3, placeholder: 'Tittel' %>
+  </div>
+  <div>
+    <%= f.text_area :body, required: true, maxlength: 200, placeholder: 'Tekst' %>
+  </div>
+  <div>
+    <%= f.submit 'Legg til spørsmål' %>
+  </div>
+<% end %>
