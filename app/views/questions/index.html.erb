@@ -9,15 +9,11 @@
         <%= q.format_time %>
       </time>
     </h5>
+    <div><%= link_to 'Forestilling spørsmål', show_questions_path(q) %></div>
+    <div><%= link_to 'Redigere spørsmål', edit_questions_path(q) %></div>
+    <div><%= link_to 'Slette spørsmål', destroy_questions_path(q), data: { method: :delete, confirm: 'Er du sikker?' } %></div>
   <% end %>
 </div>
 
-<div>
-  <%= link_to 'Redigere spørsmål', edit_questions_path(q) %>
-</div>
-
-<div>
-  <%= link_to 'Slette spørsmål', destroy_questions_path(q), data: { method: :delete, confirm: 'Er du sikker?' } %>
-</div>
 
 
